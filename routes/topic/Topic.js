@@ -54,8 +54,9 @@ router.get("/getTopics", async (req, res) => {
 
 router.get("/getSubTopics", async (req, res) => {
   try {
+    console.log(req);
     const subTopicResult = await SubTopic.find({
-      topicId: req.body.topicId,
+      topicId: req.query.topicId,
     }).sort({
       createdAt: -1,
     });
