@@ -10,8 +10,8 @@ dotenv.config();
 
 app.use(cors());
 app.use(express.json());
-app.use("/topic", topic);
-app.use("/thread", thread);
+app.use("/api/topic", topic);
+app.use("/api/thread", thread);
 
 app.listen(process.env.PORT || 8000, (err) => {
   if (err) {
