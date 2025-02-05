@@ -10,9 +10,6 @@ router.post("/addTopic", async (req, res) => {
       topicName: req.body.topicName,
     });
     const topicResult = await topic.save();
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     return res.status(200).json({
       result: topicResult,
     });
