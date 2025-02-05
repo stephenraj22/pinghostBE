@@ -21,3 +21,5 @@ app.listen(process.env.PORT || 8000, (err) => {
     console.log(`Listening open PORT ${process.env.PORT}`);
   }
 });
+
+module.exports = app;
